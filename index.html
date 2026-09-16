@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solo Leveling System UI</title>
+    <title>System Calendar</title>
     <!-- Google Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -11,8 +11,8 @@
         :root {
             --sys-bg: #030811;
             --sys-panel: rgba(10, 22, 40, 0.92);
-            --sys-cyan: #f200ff;
-            --sys-blue: #00ff91;
+            --sys-cyan: #0400ff;
+            --sys-blue: #2b00ff;
             --sys-red: #a2ff00;
             --sys-gold: #ffffff;
             --sys-purple: #a855f7;
@@ -821,7 +821,7 @@
         </div>
     </div>
 
-    <script>
+    
         function formatDateKey(date) {
             const year = date.getFullYear();
             const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -993,7 +993,7 @@
 
             while (playerData.xp >= playerData.xpToNext) {
                 playerData.xp -= playerData.xpToNext;
-                playerData.level++;
+                playerData.level<script>++;
                 playerData.xpToNext = Math.floor(playerData.xpToNext * 1.25);
             }
 
