@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Calendar</title>
+    <title>Solo Leveling System UI</title>
     <!-- Google Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -11,10 +11,10 @@
         :root {
             --sys-bg: #030811;
             --sys-panel: rgba(10, 22, 40, 0.92);
-            --sys-cyan: #0400ff;
-            --sys-blue: #2b00ff;
-            --sys-red: #a2ff00;
-            --sys-gold: #ffffff;
+            --sys-cyan: #00f0ff;
+            --sys-blue: #0072ff;
+            --sys-red: #ff0055;
+            --sys-gold: #ffb700;
             --sys-purple: #a855f7;
             --sys-green: #22c55e;
             --sys-border: rgba(0, 240, 255, 0.3);
@@ -658,7 +658,7 @@
             <button class="icon-btn"><span class="material-icons-outlined">widgets</span></button>
             <div class="logo">
                 <span class="material-icons-outlined" style="font-size: 28px; color: var(--sys-cyan);">auto_awesome</span>
-                CALENDAR SYSTEM
+                SYSTEM UI
             </div>
             <button class="btn" id="today-btn">TODAY</button>
             <button class="icon-btn" id="prev-btn"><span class="material-icons-outlined">chevron_left</span></button>
@@ -681,7 +681,7 @@
         <aside>
             <button class="btn-create" id="open-modal-btn">
                 <span class="material-icons-outlined" style="font-size: 20px;">add_task</span>
-                [ BROWSE NEW QUEST ]
+                [ ACCEPT QUEST ]
             </button>
 
             <!-- Player Status HUD -->
@@ -821,7 +821,7 @@
         </div>
     </div>
 
-    
+    <script>
         function formatDateKey(date) {
             const year = date.getFullYear();
             const month = String(date.getMonth() + 1).padStart(2, '0');
@@ -993,7 +993,7 @@
 
             while (playerData.xp >= playerData.xpToNext) {
                 playerData.xp -= playerData.xpToNext;
-                playerData.level<script>++;
+                playerData.level++;
                 playerData.xpToNext = Math.floor(playerData.xpToNext * 1.25);
             }
 
